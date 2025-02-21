@@ -25,10 +25,6 @@ wsl.exe ~ -d Ubuntu -- tmux
 
 This will open the terminal with `tmux` running by default.  
 
-### Disable Win+L
-
-Run the [disable-win-l.reg](./disable-win-l.reg) file to disable the <kbd>Win + L</kbd> shortcut, which prevents Windows from entering sleep mode unintentionally.
-
 ### WSL
 
 Place the [.wslconfig](./.wslconfig) file in your home directory. For reference, see this [documentation](https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310).
