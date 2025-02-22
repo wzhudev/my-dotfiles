@@ -51,3 +51,27 @@ require("lazy").setup({
     },
   },
 })
+
+local devicons = require("nvim-web-devicons")
+
+function _G.get_file_path()
+  local filename = vim.fn.expand("%:t")
+  if filename == "" then
+    return "[No Name]"
+  end
+
+  local filepath = vim.fn.expand("%:p")
+  if filepath == "" then
+    return "[No Name]"
+  end
+
+  local cwd = vim.fn.getcwd()
+  local relative_path = filepath:gsub(cwd, ""):gsub("^[\\/]", "")
+
+  local extension = vim.fn.expand("%:e")
+  local icon, color = devicons.get_icon_color(filename, extension)
+  vim.api.nvim_set_hl(0, "WinBarFile", { fg = color, bg = "#1E1E2E" })
+  return "%#" .. "WinBarFile" .. "#" .. icon .. " " .. relative_path
+end
+
+vim.opt.winbar = "%{%v:lua.get_file_path()%}"
