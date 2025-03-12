@@ -40,7 +40,7 @@ local function launchOrNextWindow(name, showName)
 end
 
 hs.hotkey.bind({ "alt" }, "e", function()
-	launchOrNextWindow("Google Chrome")
+	launchOrNextWindow("Microsoft Edge")
 end)
 
 hs.hotkey.bind({ "alt" }, "v", function()
@@ -49,6 +49,10 @@ end)
 
 hs.hotkey.bind({ "alt" }, "t", function()
 	launchOrNextWindow("Ghostty")
+end)
+
+hs.hotkey.bind({ "alt" }, "n", function()
+	launchOrNextWindow("Notion")
 end)
 
 hs.notify.new({ title = "Hammerspoon", subTitle = "Configuration reloaded!" }):send()
