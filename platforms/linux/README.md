@@ -30,7 +30,7 @@ Copy and link configuration files:
 ```bash  
 cp ~/.dotfiles/config/git.gitconfig ~/.gitconfig  
 
-stow tmux nvim mise vim starship
+stow tmux nvim vim starship
 
 conda config --set changeps1 False
 ```  
