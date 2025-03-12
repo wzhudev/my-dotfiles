@@ -11,7 +11,7 @@
 Use Homebrew to install the required terminal applications:
 
 ```bash
-brew install zoxide eza fzf gh lazygit lazydocker mise starship tree cloc stow
+brew install zoxide eza fzf gh lazygit lazydocker mise starship tree cloc stow bat
 brew install zsh-syntax-highlighting zsh-autosuggestions
 ```  
 
