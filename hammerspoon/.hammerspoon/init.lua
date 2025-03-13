@@ -39,8 +39,8 @@ local function launchOrNextWindow(name, showName)
 	end
 end
 
-hs.hotkey.bind({ "alt" }, "e", function()
-	launchOrNextWindow("Microsoft Edge")
+hs.hotkey.bind({ "alt" }, "c", function()
+	launchOrNextWindow("Google Chrome")
 end)
 
 hs.hotkey.bind({ "alt" }, "v", function()
