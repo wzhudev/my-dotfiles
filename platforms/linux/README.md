@@ -1,10 +1,26 @@
 # WSL Setup
 
+## Install zsh and oh-my-zsh
+
+```shell
+sudo apt install zsh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+And change the default shell to zsh:
+
+```shell
+chsh -s $(which zsh)
+```
+
 ## Install Homebrew (Linuxbrew)
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+And add Homebrew to the .zshrc file.
 
 ## Install Devtools
 
@@ -30,8 +46,7 @@ Copy and link configuration files:
 ```bash  
 cp ~/.dotfiles/config/git.gitconfig ~/.gitconfig  
 
-stow tmux nvim vim starship
-
+stow vim starship
 conda config --set changeps1 False
 ```  
 
